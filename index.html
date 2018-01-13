@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Todo list</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+  <body ng-controller="TodoCtrl">
+    <div class="todo-wrapper">
+      <h2>You've got <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
+      <ul>
+        <li ng-repeat="todo in todos">
+		<div class= "done-{{todo.done}}">
+		<input type="checkbox" ng-model="todo.done"/>
+		  <edit-in-place value="todo.text"></edit-in-place>
+          <!-- 
+          <label class="done-{{todo.done}}" >{{todo.text}}</label> -->
+        </li>
+		</div>
+      </ul>
+      <form>
+        <input class="add-input" placeholder="What needs to be done?" type="text" ng-model="formTodoText" ng-model-instant />
+        <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
+      </form>
+      
+      <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+    </div>
+ 
+
+  
+	<script  src="js/angular.min.js"></script>
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
