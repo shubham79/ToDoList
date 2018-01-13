@@ -26,8 +26,8 @@ app.directive( 'editInPlace', function() {
 
 app.controller('TodoCtrl', function ( $scope ) {
   $scope.todos = [
-    {text:'Learn AngularJS', done:false},         
-    {text: 'Build an app', done:false}
+    {text:'Task1', done:false},         
+    {text: 'Task2', done:false}
   ];
   
   $scope.getTotalTodos = function () {
