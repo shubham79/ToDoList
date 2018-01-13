@@ -42,15 +42,15 @@ app.controller('TodoCtrl', function ( $scope ) {
   
   
     $scope.clearCompleted = function () {
-		console.log($scope.todos);
+		
         for(var i=0; i<$scope.todos.length ; i++)
 		{
 			if($scope.todos[i].done === true)
 			{
-				console.log("in");
+				
 				$scope.todos.splice(i,1);
 			}
 		}
-		console.log($scope.todos);
+		// console.log($scope.todos);
 	};
 });
